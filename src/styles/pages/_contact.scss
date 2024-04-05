@@ -1,0 +1,123 @@
+.contactContent{
+    background: $color-3;
+    border-radius: $borderRadius;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 45% 35%;
+
+    .header{
+        grid-area: 1;
+        width: 100%;
+        position: relative;
+        background: $color-1;
+        height: 200px;
+        background: url(../../media/map.png) no-repeat center top/cover;
+        filter: grayscale(100%);
+
+        
+    }
+}
+
+
+
+.contactBox{
+    grid-area: 2;
+    background: $color-5;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    z-index: 2;
+    border-radius: $borderRadius;
+    box-shadow: 0 3px 10px #333;
+    width: 50%;
+    min-width: 440px;
+    min-height: 250px;
+
+    h1{
+        text-align: center;
+        margin-top: 0.3rem;
+        position: relative;
+        color: $color-2;
+
+        &:after{
+            content: '';
+            height: 1px; 
+            width: 50%;
+            background: $color-1;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    ul{
+        height: 72%;
+        width: inherit;
+        display: grid;
+        margin-top: 1.2rem;
+
+        li{
+            position: relative;
+        }
+
+        i{
+            font-size: 1.4rem;
+            position: absolute;
+            transform: translateX(20px);
+            color: $color-2;
+        }
+        span{
+            font-size: 1.4rem;
+            position: absolute;
+            transform: translateX(52px);
+            background: transparent;
+            border: none;
+            outline: none; 
+            width: 350px;
+            transition: .2s ease;
+
+        }
+        .clickInput:hover{
+            transform: translateX(56px);
+            cursor: pointer;
+        }
+    }
+}
+
+.Network{
+    height: 100%;
+    width: 100%;
+    background: rgb(248, 245, 245);
+    @include verticalCenter;
+    display: flex;
+ 
+    .lien{
+        text-align: center;
+        border-radius: 20px;
+    @include verticalCenter;
+        margin-right: 20px;
+        background: $color-5;
+        border-bottom: 3px solid black;
+        width: 100px;
+        height: 100px;
+
+        &:hover{ 
+            background: rgb(10, 6, 240);
+            width: 120px;
+            height: 120px;
+            cursor: pointer;
+
+            i{
+                color: white;
+            }
+            h4{
+             color: white;
+            }
+        }
+
+        a{
+            cursor: pointer;
+        }
+    }
+}

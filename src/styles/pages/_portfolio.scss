@@ -1,0 +1,148 @@
+.portfolio{
+    .portfolioContent{
+        width: 100%;
+        display: grid;
+        min-height: 95vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr;
+        grid-template-areas: 
+        "1"
+        "2";
+    }
+    .radioDisplay{
+        grid-area: 1;
+        border-radius: $borderRadius;  
+        display: flex;
+        width: 100%;
+        padding: 1rem 2rem;
+        margin: 0 auto;
+        background: $color-2;
+       user-select: none;
+        box-shadow: $shadow;
+
+        li{
+            color: $color-3;
+            font-size: 1.1rem;
+            text-transform: uppercase; 
+            padding: 0 1rem;
+            flex: 1;
+            z-index: 2;
+            @include verticalCenter;
+
+            input[type= "radio"]{
+                visibility: hidden;
+                position: relative;
+            }
+        }
+    }
+}
+.projet{
+    display: block;
+    float: left;
+    background-color: blue;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 50px;
+    margin: 20px 20px 20px 20px;
+    width: 250px;
+    height: 300px;
+    h3{
+        color: white;
+        font-size: 30px;
+    }
+    .img{
+        box-shadow: 0 4px 8px black;
+        width: 99%;
+        height: 180px;
+    }
+}
+
+.infos{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 40px;
+    height: 20px;
+    font-size: 40px;
+    background: rgb(252, 248, 248);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.showInfo{
+    border-radius: 50px;
+    width: 550px;
+    height: 200px;
+    background: blue;
+    justify-content: space-between;
+
+    .infosContent{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+    } 
+}
+.infosContent{
+    height: 100%;
+    @include verticalCenter;
+}
+h2{
+    color: white;
+}
+.button{
+    cursor: pointer;
+    padding-top: 2%;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgb(100, 128, 0);
+    width: 190px;
+    height: 50px;
+}
+.text{ 
+    color: white;
+}
+.button2{
+    text-align: center;
+    border-radius: 20px;
+    background-color: green;
+    width: 100px;
+    height: 40px;
+}
+
+
+
+@media (max-width: 650px) and (max-width: 571px){
+    .portfolioContent{
+        .projet{
+            width: 49% !important;
+
+            i{
+                font-size: 1rem;
+            }
+            .infosContent{
+                width: 10% !important;
+            }
+        }
+    }
+}
+@media (max-width: 520px){
+    .radioDisplay{
+        display: none !important;
+    }
+    .img{
+        box-shadow: 0 4px 8px black;
+        width: 280px;
+        height: 200px;
+    }
+    .portfolioContent{
+        grid-template-rows: 1fr !important;
+
+        .projet{
+            grid-template-rows: 30px 40px 80px 40px !important;
+            width: 290px !important;
+
+            img{
+                height: 30px !important;
+            }
+        }
+    }
+}
+

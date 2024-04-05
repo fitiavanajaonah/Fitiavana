@@ -1,0 +1,40 @@
+.notFound{
+    @include verticalCenter;
+    height: 95vh;
+    max-width: 1200px;
+    background: #00bfff;
+    border-radius: $borderRadius;
+    text-align: center;
+h3{
+    color: black;
+        margin-bottom: 3rem;
+        font-size: 2rem;
+    }
+    i{
+        padding-top: 20px;
+    }
+    a{ 
+        padding:1rem 2rem;
+        border-radius: $borderRadius;
+        background: $color-5;
+        transition: .2s;
+
+        &:hover{
+            background: $color-4;
+        }
+    }
+    .notFoundContent{
+        border-radius: $borderRadius;
+        @include verticalCenter;
+        text-align: center;
+        width: 1000px;
+        height: 400px;
+        background: #ffffff;
+
+       span{
+        @include verticalCenter;
+       }
+    }
+}
+
+ 
